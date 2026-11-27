@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="or">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>ଶ୍ରୀ ଜଗନ୍ନାଥ - ମୁଖ୍ୟ ପୃଷ୍ଠା</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      -webkit-tap-highlight-color: transparent;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman';
+      background-color: #fff9f0;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    /* =======================
+       EXACT HEADER FROM YOUR 5TH WEB
+    ======================= */
+    .golden-navbar {
+      background: radial-gradient(circle, #8B0000, #4b0000);
+      border-top: 4px solid gold;
+      border-bottom: 4px solid gold;
+      padding: 8px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .left-section {
+      display: flex;
+      align-items: center;
+      gap: 0px;
+    }
+
+    .left-section .logo {
+      width: 42px;
+      height: auto;
+      margin-right: 10px;
+      margin-left: 10px;
+      border: 3px solid gold;
+      border-radius: 50%;
+      box-shadow: 0 0 12px gold;
+      object-fit: cover;
+    }
+
+    .left-section .logo-text {
+      color: #ffd700;
+      font-size: 28px;
+      font-weight: bold;
+      text-shadow: 2px 2px 6px #000;
+      margin-bottom: auto;
+    }
+
+    .golden-navbar ul.right-section {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 7px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .golden-navbar li {
+      display: inline-block;
+      margin: 0px 13px;
+    }
+
+    .golden-navbar a {
+      color: #ffd700;
+      font-size: 19px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s ease;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-shadow: 2px 2px 6px #000;
+    }
+
+    .golden-navbar a i {
+      font-size: 21px;
+      margin-bottom: 4px;
+      display: block;
+      text-shadow: 2px 2px 6px #000;
+    }
+
+    .golden-navbar a:hover {
+      color: #ffffff;
+      text-shadow: 2px 2px 6px #000;
+    }
+
+    #menu-toggle {
+      display: none;
+    }
+
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      color: #ffd700;
+      text-shadow: 2px 2px 6px #000;
+      margin-right: 12px;
+    }
+
+    .hamburger svg {
+      height: 3em;
+      transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .line {
+      fill: none;
+      stroke: white;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 3;
+      transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                  stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .line-top-bottom {
+      stroke-dasharray: 12 63;
+    }
+
+    #menu-toggle:checked + .hamburger svg {
+      transform: rotate(-45deg);
+    }
+
+    #menu-toggle:checked + .hamburger svg .line-top-bottom {
+      stroke-dasharray: 20 300;
+      stroke-dashoffset: -32.42;
+    }
+
+    @media (max-width: 1056px) {
+      .golden-navbar ul.right-section {
+        flex-direction: column;
+        background: #4b0000;
+        border-left: 3px solid gold;
+        border-bottom: 3px solid gold;
+        position: absolute;
+        top: 66px;
+        right: -100%;
+        width: 220px;
+        padding: 20px;
+        border-radius: 0 0 0 8px;
+        transition: right 0.4s ease;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      #menu-toggle:checked ~ .right-section {
+        right: 0;
+      }
+
+      .golden-navbar a {
+        margin: 4px 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .left-section .logo {
+        width: 39px;
+        margin-right: 5px;
+      }
+
+      .left-section .logo-text {
+        font-size: 26px;
+      }
+    }
+
+    /* =======================
+       1. Shrimandir Photo Banner
+    ======================= */
+    .temple-banner {
+      margin-top: 68px;
+      width: 100%;
+      background-color: #2b0000;
+      border-bottom: 4px solid gold;
+    }
+
+    .temple-banner img {
+      width: 100%;
+      max-height: 480px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* =======================
+       2. Notice Board
+    ======================= */
+    .notice-container {
+      max-width: 1050px;
+      margin: 28px auto;
+      padding: 0 16px;
+    }
+
+    .notice-board {
+      background: #fff4df;
+      border: 2px solid #8B0000;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .notice-header {
+      background: radial-gradient(circle, #8B0000, #4b0000);
+      color: #ffd700;
+      padding: 10px 18px;
+      font-size: 21px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 3px solid gold;
+      text-shadow: 1px 1px 4px #000;
+    }
+
+    .notice-body {
+      padding: 16px 20px;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    .notice-body ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .notice-body li {
+      margin-bottom: 8px;
+    }
+
+    .notice-body li:last-child {
+      margin-bottom: 0;
+    }
+
+    .notice-body a {
+      color: #8B0000;
+      font-weight: bold;
+    }
+
+    /* =======================
+       3. Quick Sections
+    ======================= */
+    .sections-wrapper {
+      max-width: 1050px;
+      margin: 32px auto 50px;
+      padding: 0 16px;
+    }
+
+    .section-heading {
+      text-align: center;
+      color: #8B0000;
+      font-size: 28px;
+      margin-bottom: 22px;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .info-card {
+      background: #ffffff;
+      border: 2px solid #d4af37;
+      border-top: 5px solid #8B0000;
+      border-radius: 10px;
+      padding: 22px 16px;
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .info-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 18px rgba(139, 0, 0, 0.18);
+    }
+
+    .info-card i {
+      font-size: 30px;
+      color: #8B0000;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .info-card h3 {
+      margin: 0 0 8px 0;
+      font-size: 21px;
+      color: #8B0000;
+    }
+
+    .info-card p {
+      margin: 0;
+      font-size: 15.5px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 820px) {
+      .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 560px) {
+      .cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* =======================
+       4. Footer
+    ======================= */
+    .temple-footer {
+      background: radial-gradient(circle, #8B0000, #4b0000);
+      color: #fff3d6;
+      border-top: 4px solid gold;
+      padding: 24px 16px;
+      text-align: center;
+    }
+
+    .footer-title {
+      color: #ffd700;
+      font-size: 22px;
+      font-weight: bold;
+      text-shadow: 1px 1px 4px #000;
+      margin-bottom: 8px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin: 12px 0;
+    }
+
+    .footer-links a {
+      color: #ffd700;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .footer-disclaimer {
+      max-width: 780px;
+      margin: 10px auto 0;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255, 215, 0, 0.35);
+      font-size: 14.5px;
+      color: #f5deb3;
+    }
+
+    /* =======================
+       5. Floating Chat Icon
+    ======================= */
+    #chatIcon {
+      position: fixed;
+      bottom: 26px;
+      right: 26px;
+      background: linear-gradient(137deg, #ffd700, #970000);
+      color: #ffffff;
+      font-size: 32px;
+      padding: 14px;
+      border-radius: 50%;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      text-decoration: none;
+      cursor: pointer;
+      z-index: 1000;
+      animation: pulse 2s infinite;
+    }
+
+    #chatIcon:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.5); }
+      70% { box-shadow: 0 0 0 15px rgba(255, 215, 0, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0); }
+    }
+
+    @media (max-width: 768px) {
+      #chatIcon {
+        font-size: 20px;
+        bottom: 16px;
+        right: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Exact Header Style from web5.html -->
+  <nav class="golden-navbar">
+    <div class="left-section">
+      <img src="jaga3.png" alt="Jagannath Logo" class="logo">
+      <span class="logo-text">ଶ୍ରୀ ଜଗନ୍ନାଥ</span>
+    </div>
+
+    <input type="checkbox" id="menu-toggle">
+    <label class="hamburger" for="menu-toggle">
+      <svg viewBox="0 0 32 32">
+        <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+        <path class="line" d="M7 16 27 16"></path>
+      </svg>
+    </label>
+
+    <ul class="right-section">
+      <li><a href="index.html"><i class="fa fa-home"></i> ମୁଖ୍ୟ ପୃଷ୍ଠା</a></li>
+      <li><a href="web5.html"><i class="fa fa-om"></i> ସମ୍ପୂର୍ଣ୍ଣ ତଥ୍ୟ</a></li>
+      <li><a href="web13.html"><i class="fa fa-bell"></i> ନିତ୍ୟ ସେବା</a></li>
+      <li><a href="web16.html"><i class="fa fa-comments"></i> ଚାଟ୍ ବୋଟ୍</a></li>
+      <li><a href="web23.html"><i class="fa fa-spa"></i> ସେବକ</a></li>
+      <li><a href="web22.html"><i class="fa fa-dove"></i> ବେଶ</a></li>
+      <li><a href="#footer"><i class="fa fa-phone"></i> ସମ୍ପର୍କ କରନ୍ତୁ</a></li>
+    </ul>
+  </nav>
+
+  <!-- 1. Shrimandir Photo -->
+  <section class="temple-banner">
+    <img src="srimandir.jpg" alt="ଶ୍ରୀ ମନ୍ଦିର, ପୁରୀ">
+  </section>
+
+  <!-- 2. Notice Board -->
+  <section class="notice-container">
+    <div class="notice-board">
+      <div class="notice-header">
+        <i class="fa fa-bullhorn"></i>
+        <span>ସୂଚନା ଫଳକ</span>
+      </div>
+      <div class="notice-body">
+        <ul>
+          <li><strong>ସୂଚନା:</strong> ଏହା ଶ୍ରୀମନ୍ଦିର ପ୍ରଶାସନର ଅଫିସିଆଲ୍ ୱେବସାଇଟ୍ ନୁହେଁ; ଏହା କେବଳ ଭକ୍ତି ଓ ତଥ୍ୟ ପ୍ରଦାନ ଉଦ୍ଦେଶ୍ୟରେ ନିର୍ମିତ। ଅଫିସିଆଲ୍ ସୂଚନା ପାଇଁ <a href="https://shreejagannatha.in" target="_blank">shreejagannatha.in</a> ଦେଖନ୍ତୁ।</li>
+          <li><strong>ଦୈନିକ ନୀତି:</strong> ମଙ୍ଗଳ ଆଳତୀ, ଅବକାଶ, ସକାଳ ଧୂପ ଏବଂ ବଡ଼ସିଂହାର ବେଶର ସମ୍ପୂର୍ଣ୍ଣ ସମୟ ସାରଣୀ ପାଇଁ "ନିତ୍ୟ ସେବା" ବିଭାଗ ଦେଖନ୍ତୁ।</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Sections -->
+  <section class="sections-wrapper">
+    <h2 class="section-heading">ପ୍ରମୁଖ ବିଭାଗ ସମୂହ</h2>
+    <div class="cards-grid">
+      <a href="web5.html" class="info-card">
+        <i class="fa fa-om"></i>
+        <h3>ସମ୍ପୂର୍ଣ୍ଣ ତଥ୍ୟ</h3>
+        <p>ଶ୍ରୀମନ୍ଦିରର ଇତିହାସ, ସ୍ଥାପତ୍ୟ, ଚାରିଦ୍ୱାର ଓ ପରମ୍ପରା ବିଷୟରେ ଜାଣନ୍ତୁ।</p>
+      </a>
+
+      <a href="web13.html" class="info-card">
+        <i class="fa fa-bell"></i>
+        <h3>ନିତ୍ୟ ସେବା</h3>
+        <p>ପ୍ରତିଦିନର ଦ୍ୱାରଫିଟା ଠାରୁ ପହୁଡ଼ ପର୍ଯ୍ୟନ୍ତ ସମସ୍ତ ନୀତିକାନ୍ତିର ବିବରଣୀ।</p>
+      </a>
+
+      <a href="web22.html" class="info-card">
+        <i class="fa fa-dove"></i>
+        <h3>ବେଶ</h3>
+        <p>ମହାପ୍ରଭୁଙ୍କ ବିଭିନ୍ନ ପର୍ବପର୍ବାଣି ଓ ଦୈନିକ ବେଶ ବିଷୟରେ ତଥ୍ୟ।</p>
+      </a>
+
+      <a href="web23.html" class="info-card">
+        <i class="fa fa-spa"></i>
+        <h3>ସେବକ</h3>
+        <p>ଶ୍ରୀମନ୍ଦିରର ବିଭିନ୍ନ ସେବାୟତ ନିଯୋଗ ଓ ସେମାନଙ୍କ ସେବା କାର୍ଯ୍ୟ।</p>
+      </a>
+
+      <a href="web16.html" class="info-card">
+        <i class="fa fa-comments"></i>
+        <h3>ଚାଟ୍ ବୋଟ୍</h3>
+        <p>ଶ୍ରୀଜଗନ୍ନାଥ ଓ ଶ୍ରୀମନ୍ଦିର ସମ୍ବନ୍ଧୀୟ ପ୍ରଶ୍ନର ତୁରନ୍ତ ଉତ୍ତର ପାଆନ୍ତୁ।</p>
+      </a>
+
+      <a href="#footer" class="info-card">
+        <i class="fa fa-info-circle"></i>
+        <h3>ଯାତ୍ରୀ ସୂଚନା</h3>
+        <p>ପୁରୀ ଦର୍ଶନ ନିୟମାବଳୀ ଓ ମନ୍ଦିର ପରିସର ସମ୍ବନ୍ଧୀୟ ସାଧାରଣ ସୂଚନା।</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- 4. Footer -->
+  <footer id="footer" class="temple-footer">
+    <div class="footer-title">ଜୟ ଜଗନ୍ନାଥ 🙏</div>
+    <div class="footer-links">
+      <a href="index.html">ମୁଖ୍ୟ ପୃଷ୍ଠା</a>
+      <a href="web5.html">ସମ୍ପୂର୍ଣ୍ଣ ତଥ୍ୟ</a>
+      <a href="web13.html">ନିତ୍ୟ ସେବା</a>
+      <a href="web22.html">ବେଶ</a>
+      <a href="web23.html">ସେବକ</a>
+      <a href="web16.html">ଚାଟ୍ ବୋଟ୍</a>
+    </div>
+    <div class="footer-disclaimer">
+      ଏହି ୱେବସାଇଟ୍ ଶିକ୍ଷା ଓ ଭକ୍ତି ଉଦ୍ଦେଶ୍ୟରେ ପ୍ରସ୍ତୁତ କରାଯାଇଛି। ଶ୍ରୀମନ୍ଦିର ପ୍ରଶାସନର ଅଫିସିଆଲ୍ ତଥ୍ୟ ପାଇଁ shreejagannatha.in ପରିଦର୍ଶନ କରନ୍ତୁ।
+    </div>
+  </footer>
+
+  <!-- Floating Chatbot Icon -->
+  <a id="chatIcon" href="web16.html" title="ଚାଟ୍ ବୋଟ୍">💬</a>
+</body>
+</html>
