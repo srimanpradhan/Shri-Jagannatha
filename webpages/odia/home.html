@@ -2,56 +2,55 @@
 <html lang="or">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ଶ୍ରୀ ଜଗନ୍ନାଥ - ମୁଖ୍ୟ ପୃଷ୍ଠା</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     * {
-      -webkit-tap-highlight-color: transparent;
       box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
     }
 
-    body {
+    html, body {
       margin: 0;
       padding: 0;
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman';
-      background-color: #fff9f0;
-      color: #333;
       overflow-x: hidden;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      background-color: #fff9f0;
+      color: #2b0909;
     }
 
     /* =======================
-       EXACT HEADER FROM YOUR 5TH WEB
+       1. Navbar (Same Maroon & Gold)
     ======================= */
     .golden-navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
       background: radial-gradient(circle, #8B0000, #4b0000);
       border-top: 4px solid gold;
       border-bottom: 4px solid gold;
-      padding: 8px 0;
+      padding: 10px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     }
 
     .left-section {
       display: flex;
       align-items: center;
-      gap: 0px;
+      gap: 12px;
     }
 
     .left-section .logo {
-      width: 42px;
-      height: auto;
-      margin-right: 10px;
-      margin-left: 10px;
+      width: 48px;
+      height: 48px;
       border: 3px solid gold;
       border-radius: 50%;
-      box-shadow: 0 0 12px gold;
+      box-shadow: 0 0 12px rgba(255, 215, 0, 0.7);
       object-fit: cover;
     }
 
@@ -60,46 +59,38 @@
       font-size: 28px;
       font-weight: bold;
       text-shadow: 2px 2px 6px #000;
-      margin-bottom: auto;
     }
 
-    .golden-navbar ul.right-section {
+    .right-section {
       list-style: none;
       margin: 0;
       padding: 0;
       display: flex;
-      gap: 7px;
-      transition: all 0.3s ease-in-out;
+      align-items: center;
+      gap: 22px;
     }
 
-    .golden-navbar li {
-      display: inline-block;
-      margin: 0px 13px;
-    }
-
-    .golden-navbar a {
+    .right-section li a {
       color: #ffd700;
       font-size: 19px;
       font-weight: bold;
       text-decoration: none;
-      transition: 0.3s ease;
-      text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
+      text-align: center;
       text-shadow: 2px 2px 6px #000;
+      transition: color 0.3s ease, transform 0.2s ease;
     }
 
-    .golden-navbar a i {
-      font-size: 21px;
+    .right-section li a i {
+      font-size: 19px;
       margin-bottom: 4px;
-      display: block;
-      text-shadow: 2px 2px 6px #000;
     }
 
-    .golden-navbar a:hover {
+    .right-section li a:hover {
       color: #ffffff;
-      text-shadow: 2px 2px 6px #000;
+      transform: translateY(-2px);
     }
 
     #menu-toggle {
@@ -109,19 +100,16 @@
     .hamburger {
       display: none;
       cursor: pointer;
-      color: #ffd700;
-      text-shadow: 2px 2px 6px #000;
-      margin-right: 12px;
     }
 
     .hamburger svg {
-      height: 3em;
+      height: 2.6em;
       transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .line {
       fill: none;
-      stroke: white;
+      stroke: #ffd700;
       stroke-linecap: round;
       stroke-linejoin: round;
       stroke-width: 3;
@@ -142,53 +130,16 @@
       stroke-dashoffset: -32.42;
     }
 
-    @media (max-width: 1056px) {
-      .golden-navbar ul.right-section {
-        flex-direction: column;
-        background: #4b0000;
-        border-left: 3px solid gold;
-        border-bottom: 3px solid gold;
-        position: absolute;
-        top: 66px;
-        right: -100%;
-        width: 220px;
-        padding: 20px;
-        border-radius: 0 0 0 8px;
-        transition: right 0.4s ease;
-      }
-
-      .hamburger {
-        display: flex;
-      }
-
-      #menu-toggle:checked ~ .right-section {
-        right: 0;
-      }
-
-      .golden-navbar a {
-        margin: 4px 0;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .left-section .logo {
-        width: 39px;
-        margin-right: 5px;
-      }
-
-      .left-section .logo-text {
-        font-size: 26px;
-      }
-    }
-
     /* =======================
-       1. Shrimandir Photo Banner
+       2. Shrimandir Photo Banner
     ======================= */
     .temple-banner {
-      margin-top: 68px;
+      margin-top: 76px;
       width: 100%;
       background-color: #2b0000;
-      border-bottom: 4px solid gold;
+      border-bottom: 4px solid #d4af37;
+      position: relative;
+      overflow: hidden;
     }
 
     .temple-banner img {
@@ -199,10 +150,10 @@
     }
 
     /* =======================
-       2. Notice Board
+       3. Notice Board
     ======================= */
     .notice-container {
-      max-width: 1050px;
+      max-width: 1100px;
       margin: 28px auto;
       padding: 0 16px;
     }
@@ -211,28 +162,27 @@
       background: #fff4df;
       border: 2px solid #8B0000;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 14px rgba(139, 0, 0, 0.12);
       overflow: hidden;
     }
 
     .notice-header {
-      background: radial-gradient(circle, #8B0000, #4b0000);
+      background: linear-gradient(90deg, #8B0000, #5a0000);
       color: #ffd700;
       padding: 10px 18px;
-      font-size: 21px;
+      font-size: 20px;
       font-weight: bold;
       display: flex;
       align-items: center;
       gap: 10px;
-      border-bottom: 3px solid gold;
-      text-shadow: 1px 1px 4px #000;
+      border-bottom: 2px solid #d4af37;
     }
 
     .notice-body {
       padding: 16px 20px;
-      font-size: 17px;
-      line-height: 1.7;
-      color: #333;
+      font-size: 16.5px;
+      line-height: 1.65;
+      color: #3a0d0d;
     }
 
     .notice-body ul {
@@ -251,22 +201,34 @@
     .notice-body a {
       color: #8B0000;
       font-weight: bold;
+      text-decoration: underline;
     }
 
     /* =======================
-       3. Quick Sections
+       4. Quick Sections Grid
     ======================= */
     .sections-wrapper {
-      max-width: 1050px;
-      margin: 32px auto 50px;
+      max-width: 1100px;
+      margin: 34px auto 50px;
       padding: 0 16px;
     }
 
     .section-heading {
       text-align: center;
-      color: #8B0000;
+      color: #7a0000;
       font-size: 28px;
-      margin-bottom: 22px;
+      margin-bottom: 24px;
+      position: relative;
+    }
+
+    .section-heading::after {
+      content: "";
+      display: block;
+      width: 90px;
+      height: 3px;
+      background: #d4af37;
+      margin: 8px auto 0;
+      border-radius: 2px;
     }
 
     .cards-grid {
@@ -277,39 +239,175 @@
 
     .info-card {
       background: #ffffff;
-      border: 2px solid #d4af37;
+      border: 2px solid #e0c07a;
       border-top: 5px solid #8B0000;
       border-radius: 10px;
-      padding: 22px 16px;
+      padding: 22px 18px;
       text-align: center;
       text-decoration: none;
-      color: #333;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      color: #2b0909;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     }
 
     .info-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 18px rgba(139, 0, 0, 0.18);
+      border-color: #8B0000;
+      box-shadow: 0 8px 20px rgba(139, 0, 0, 0.16);
     }
 
     .info-card i {
-      font-size: 30px;
+      font-size: 32px;
       color: #8B0000;
-      margin-bottom: 10px;
-      display: block;
+      background: #fff3d6;
+      width: 64px;
+      height: 64px;
+      line-height: 64px;
+      border-radius: 50%;
+      border: 2px solid #d4af37;
+      margin-bottom: 14px;
     }
 
     .info-card h3 {
       margin: 0 0 8px 0;
       font-size: 21px;
-      color: #8B0000;
+      color: #6b0000;
     }
 
     .info-card p {
       margin: 0;
-      font-size: 15.5px;
+      font-size: 15px;
+      color: #555;
       line-height: 1.5;
+    }
+
+    /* =======================
+       5. Footer
+    ======================= */
+    .temple-footer {
+      background: radial-gradient(circle, #6b0000, #380000);
+      color: #fff3d6;
+      border-top: 4px solid #d4af37;
+      padding: 28px 20px 20px;
+      text-align: center;
+    }
+
+    .footer-title {
+      color: #ffd700;
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin: 14px 0;
+    }
+
+    .footer-links a {
+      color: #ffd700;
+      text-decoration: none;
+      font-size: 15.5px;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+      color: #ffffff;
+    }
+
+    .footer-disclaimer {
+      max-width: 780px;
+      margin: 12px auto 0;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 215, 0, 0.3);
+      font-size: 14px;
+      color: #e6cfa3;
+      line-height: 1.5;
+    }
+
+    /* =======================
+       6. Floating Chat Icon
+    ======================= */
+    #chatIcon {
+      position: fixed;
+      bottom: 26px;
+      right: 26px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(137deg, #ffd700, #8B0000);
+      color: #ffffff;
+      font-size: 28px;
+      border: 2px solid #ffd700;
+      border-radius: 50%;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+      text-decoration: none;
+      cursor: pointer;
+      z-index: 1000;
+      transition: transform 0.25s ease;
+      animation: pulse 2s infinite;
+    }
+
+    #chatIcon:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.55); }
+      70% { box-shadow: 0 0 0 15px rgba(255, 215, 0, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0); }
+    }
+
+    /* =======================
+       Responsive Design
+    ======================= */
+    @media (max-width: 1056px) {
+      .hamburger {
+        display: flex;
+      }
+
+      .right-section {
+        flex-direction: column;
+        align-items: flex-start;
+        background: #4b0000;
+        border-left: 3px solid gold;
+        border-bottom: 3px solid gold;
+        position: fixed;
+        top: 74px;
+        right: -100%;
+        width: 240px;
+        padding: 20px;
+        gap: 16px;
+        border-radius: 0 0 0 10px;
+        transition: right 0.35s ease;
+        box-shadow: -4px 8px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      #menu-toggle:checked ~ .right-section {
+        right: 0;
+      }
+
+      .right-section li {
+        width: 100%;
+      }
+
+      .right-section li a {
+        flex-direction: row;
+        gap: 12px;
+        font-size: 18px;
+        padding: 6px 4px;
+      }
+
+      .right-section li a i {
+        margin-bottom: 0;
+        width: 24px;
+        text-align: center;
+      }
     }
 
     @media (max-width: 820px) {
@@ -319,99 +417,36 @@
     }
 
     @media (max-width: 560px) {
+      .left-section .logo {
+        width: 40px;
+        height: 40px;
+      }
+
+      .left-section .logo-text {
+        font-size: 23px;
+      }
+
+      .temple-banner {
+        margin-top: 68px;
+      }
+
       .cards-grid {
         grid-template-columns: 1fr;
       }
-    }
 
-    /* =======================
-       4. Footer
-    ======================= */
-    .temple-footer {
-      background: radial-gradient(circle, #8B0000, #4b0000);
-      color: #fff3d6;
-      border-top: 4px solid gold;
-      padding: 24px 16px;
-      text-align: center;
-    }
-
-    .footer-title {
-      color: #ffd700;
-      font-size: 22px;
-      font-weight: bold;
-      text-shadow: 1px 1px 4px #000;
-      margin-bottom: 8px;
-    }
-
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 18px;
-      margin: 12px 0;
-    }
-
-    .footer-links a {
-      color: #ffd700;
-      text-decoration: none;
-      font-size: 16px;
-    }
-
-    .footer-links a:hover {
-      color: #ffffff;
-      text-decoration: underline;
-    }
-
-    .footer-disclaimer {
-      max-width: 780px;
-      margin: 10px auto 0;
-      padding-top: 10px;
-      border-top: 1px solid rgba(255, 215, 0, 0.35);
-      font-size: 14.5px;
-      color: #f5deb3;
-    }
-
-    /* =======================
-       5. Floating Chat Icon
-    ======================= */
-    #chatIcon {
-      position: fixed;
-      bottom: 26px;
-      right: 26px;
-      background: linear-gradient(137deg, #ffd700, #970000);
-      color: #ffffff;
-      font-size: 32px;
-      padding: 14px;
-      border-radius: 50%;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-      text-decoration: none;
-      cursor: pointer;
-      z-index: 1000;
-      animation: pulse 2s infinite;
-    }
-
-    #chatIcon:hover {
-      transform: scale(1.1);
-    }
-
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.5); }
-      70% { box-shadow: 0 0 0 15px rgba(255, 215, 0, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0); }
-    }
-
-    @media (max-width: 768px) {
       #chatIcon {
-        font-size: 20px;
-        bottom: 16px;
-        right: 16px;
+        width: 52px;
+        height: 52px;
+        font-size: 24px;
+        bottom: 18px;
+        right: 18px;
       }
     }
   </style>
 </head>
 
 <body>
-  <!-- Exact Header Style from web5.html -->
+  <!-- 1. Navbar -->
   <nav class="golden-navbar">
     <div class="left-section">
       <img src="jaga3.png" alt="Jagannath Logo" class="logo">
@@ -419,7 +454,7 @@
     </div>
 
     <input type="checkbox" id="menu-toggle">
-    <label class="hamburger" for="menu-toggle">
+    <label class="hamburger" for="menu-toggle" aria-label="Toggle Menu">
       <svg viewBox="0 0 32 32">
         <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
         <path class="line" d="M7 16 27 16"></path>
@@ -427,27 +462,28 @@
     </label>
 
     <ul class="right-section">
-      <li><a href="index.html"><i class="fa fa-home"></i> ମୁଖ୍ୟ ପୃଷ୍ଠା</a></li>
-      <li><a href="web5.html"><i class="fa fa-om"></i> ସମ୍ପୂର୍ଣ୍ଣ ତଥ୍ୟ</a></li>
-      <li><a href="web13.html"><i class="fa fa-bell"></i> ନିତ୍ୟ ସେବା</a></li>
-      <li><a href="web16.html"><i class="fa fa-comments"></i> ଚାଟ୍ ବୋଟ୍</a></li>
-      <li><a href="web23.html"><i class="fa fa-spa"></i> ସେବକ</a></li>
-      <li><a href="web22.html"><i class="fa fa-dove"></i> ବେଶ</a></li>
-      <li><a href="#footer"><i class="fa fa-phone"></i> ସମ୍ପର୍କ କରନ୍ତୁ</a></li>
+      <li><a href="index.html"><i class="fa fa-home"></i><span>ମୁଖ୍ୟ ପୃଷ୍ଠା</span></a></li>
+      <li><a href="web5.html"><i class="fa fa-om"></i><span>ସମ୍ପୂର୍ଣ୍ଣ ତଥ୍ୟ</span></a></li>
+      <li><a href="web13.html"><i class="fa fa-bell"></i><span>ନିତ୍ୟ ସେବା</span></a></li>
+      <li><a href="web16.html"><i class="fa fa-comments"></i><span>ଚାଟ୍ ବୋଟ୍</span></a></li>
+      <li><a href="web23.html"><i class="fa fa-spa"></i><span>ସେବକ</span></a></li>
+      <li><a href="web22.html"><i class="fa fa-dove"></i><span>ବେଶ</span></a></li>
+      <li><a href="#footer"><i class="fa fa-phone"></i><span>ସମ୍ପର୍କ କରନ୍ତୁ</span></a></li>
     </ul>
   </nav>
 
-  <!-- 1. Shrimandir Photo -->
+  <!-- 2. Shrimandir Photo -->
   <section class="temple-banner">
+    <!-- To folder re jouta Shrimandir photo achhi taara naam eithi deide (e.g. srimandir.jpg) -->
     <img src="srimandir.jpg" alt="ଶ୍ରୀ ମନ୍ଦିର, ପୁରୀ">
   </section>
 
-  <!-- 2. Notice Board -->
+  <!-- 3. Notice Board -->
   <section class="notice-container">
     <div class="notice-board">
       <div class="notice-header">
         <i class="fa fa-bullhorn"></i>
-        <span>ସୂଚନା ଫଳକ</span>
+        <span>ସୂଚନା ଫଳକ (Notice Board)</span>
       </div>
       <div class="notice-body">
         <ul>
@@ -458,7 +494,7 @@
     </div>
   </section>
 
-  <!-- 3. Sections -->
+  <!-- 4. Easy-to-Go Sections -->
   <section class="sections-wrapper">
     <h2 class="section-heading">ପ୍ରମୁଖ ବିଭାଗ ସମୂହ</h2>
     <div class="cards-grid">
@@ -500,7 +536,7 @@
     </div>
   </section>
 
-  <!-- 4. Footer -->
+  <!-- 5. Footer -->
   <footer id="footer" class="temple-footer">
     <div class="footer-title">ଜୟ ଜଗନ୍ନାଥ 🙏</div>
     <div class="footer-links">
